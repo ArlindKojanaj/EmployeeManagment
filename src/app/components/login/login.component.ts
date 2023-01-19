@@ -29,8 +29,8 @@ export class LoginComponent implements OnInit {
 
     const ref = this.dialogService.open(ListComponent, {
       header: 'Insert Data!',
-      width: '30%',
-      height: '30%'
+      width: '33%',
+      height: 'auto'
   });
   }
 }

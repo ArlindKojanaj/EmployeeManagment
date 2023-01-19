@@ -1,18 +1,24 @@
 
 <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid login-items">
     <div class="ui-grid-row" style="margin-bottom: 10px;">
+        <div class="ui-grid-col-2">Resignation Date:</div>
+
         <div class="ui-grid-col-6">
             <input pInputText type="text" formControlName="text1" name="text1">
         </div>
     </div>
     <div class="ui-grid-row" style="margin-bottom: 10px;">
+        <div class="ui-grid-col-2">Resignation Period:</div>
         <div class="ui-grid-col-6">
             <input pInputText type="text" formControlName="text2" name="text2">
         </div>
     </div>
-    <div class="ui-grid-row">
+    <div class="ui-grid-row inline" style="display: inline-flex; float: right;">
+        <div class="ui-grid-col-6" style="margin-right: 10px;">
+            <button pButton type="button" label="Cancel" class="p-button-warning"></button>
+        </div>
         <div class="ui-grid-col-6">
-            <button pButton type="submit" label="Add"></button>
+            <button pButton type="button" label="Confirm" class="p-button-success"></button>
         </div>
     </div>
 </div>
