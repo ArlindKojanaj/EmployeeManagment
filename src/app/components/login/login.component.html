@@ -1,5 +1,6 @@
-<form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
-    <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid" style="margin: 10px 0px">
+<form (ngSubmit)="onSubmit()" [formGroup]="loginForm" class="bck-img">
+    <!-- <img src="../../../assets/Human-Resources1.1.webp"> -->
+    <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid login-items">
         <div class="ui-grid-row">
             <div class="ui-grid-col-2">
                 Login:
@@ -27,7 +28,6 @@
             </div>
         </div>
         <div class="ui-grid-row">
-            <div class="ui-grid-col-2"></div>
             <div class="ui-grid-col-6">
                 <button pButton type="submit" label="LOGIN" [disabled]="!loginForm.valid"></button>
             </div>

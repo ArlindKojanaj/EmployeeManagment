@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { PanelModule } from 'primeng/panel';
 import { InputTextModule } from 'primeng/inputtext';
+import { DynamicDialogModule } from 'primeng/dynamicdialog';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { InputTextModule } from 'primeng/inputtext';
     ButtonModule,
     PanelModule,
     InputTextModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    DynamicDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
