@@ -7,14 +7,13 @@ export function initializeKeycloak(
     return () =>
       keycloak.init({
         config: {
-          url: 'http://localhost:3887',
+          url: 'http://172.17.0.1:3887',
           realm: 'basecom',
           clientId: 'empman-fe',
         },
         initOptions: {
-            checkLoginIframe: false,
-            checkLoginIframeInterval: 10,
-            onLoad: 'login-required',
+          onLoad: 'login-required',
+          redirectUri: window.location.origin + '/index.html',
         }
       });
 }
