@@ -13,7 +13,7 @@ export function initializeKeycloak(
         },
         initOptions: {
           onLoad: 'login-required',
-          redirectUri: window.location.origin + '/index.html',
+          redirectUri: window.location.origin + '/index.html', // redir after login
         }
       });
 }
