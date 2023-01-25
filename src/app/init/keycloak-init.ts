@@ -1,19 +1,20 @@
 
+import { environment, keycloakConfig } from "environment";
 import { KeycloakService } from "keycloak-angular";
 
-export function initializeKeycloak(
-  keycloak: KeycloakService
-  ) {
-    return () =>
-      keycloak.init({
-        config: {
-          url: 'http://172.17.0.1:3887',
-          realm: 'basecom',
-          clientId: 'empman-fe',
-        },
-        initOptions: {
-          onLoad: 'login-required',
-          redirectUri: window.location.origin + '/index.html', // redir after login
-        }
+export function initializer(keycloak: KeycloakService): () => Promise<any> {
+  return (): Promise<any> => keycloak.init(
+    {
+      config: keycloakConfig,
+      initOptions: {
+        checkLoginIframe: false
+      },
+      bearerExcludedUrls: ['assets/config.json']
+    }).then(auth => {
+    if (!auth) {
+      keycloak.login({
+        scope: environment.scope,
       });
+    }
+  });
 }

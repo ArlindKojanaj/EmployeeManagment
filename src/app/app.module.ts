@@ -38,15 +38,15 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     InputTextModule,
     ReactiveFormsModule,
     DynamicDialogModule,
-    // KeycloakAngularModule
+    KeycloakAngularModule
   ],
   providers: [
-    // {
-    //   provide: APP_INITIALIZER,
-    //   useFactory: initializeKeycloak,
-    //   multi: true,
-    //   deps: [KeycloakService],
-    // }
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initializeKeycloak,
+      multi: true,
+      deps: [KeycloakService],
+    }
   ],
   bootstrap: [AppComponent]
 })
