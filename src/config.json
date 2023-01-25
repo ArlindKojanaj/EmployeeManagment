@@ -1,5 +1,6 @@
 {
-  "SSO_URL": "$API_URL::https://sso.n-ess.it/auth/",
-  "SSO_REALM": "lab",
-  "SSO_CLIENTID": "empman-ui-ng",
+  "SSO_URL": "$SSO_URL::https://sso.n-ess.it/auth/",
+  "SSO_REALM": "$SSO_REALM::lab",
+  "SSO_CLIENTID": "$SSO_CLIENTID::empman-ui-ng",
+  "API_URL": "$API_URL::https://empman-be.n-ess.it/empman/",
 }
