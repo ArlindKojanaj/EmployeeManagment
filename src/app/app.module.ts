@@ -15,8 +15,10 @@ import { PanelModule } from 'primeng/panel';
 import { InputTextModule } from 'primeng/inputtext';
 import { DynamicDialogModule } from 'primeng/dynamicdialog';
 import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
-import { initializeKeycloak } from './init/keycloak-init';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { BasicHttpInterceptor } from './init/basic-http-interceptor';
+import { initializer } from './init/keycloak-init';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
   providers: [
     {
       provide: APP_INITIALIZER,
-      useFactory: initializeKeycloak,
+      useFactory: initializer,
       multi: true,
       deps: [KeycloakService],
     }
