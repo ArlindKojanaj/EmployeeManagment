@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { KeycloakService } from 'keycloak-angular';
+import { AuthService } from 'src/app/core/services/auth.service';
 import { EmployeeService } from 'src/app/core/services/employee.service';
 
 @Component({
@@ -8,10 +10,14 @@ import { EmployeeService } from 'src/app/core/services/employee.service';
 })
 export class DashboardComponent {
 
-  constructor(private employeeService: EmployeeService) { }
+  constructor(private employeeService: EmployeeService, private authService: AuthService) { }
 
   ngOnInit(): void {
     this.getEmployeeCount();
+  }
+
+  logout() {
+    this.authService.logout();
   }
 
   getEmployeeCount() {

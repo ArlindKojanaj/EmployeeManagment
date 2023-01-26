@@ -3,6 +3,7 @@ import {KeycloakProfile} from 'keycloak-js';
 import {KeycloakEvent, KeycloakService} from 'keycloak-angular';
 import {JwtHelperService} from '@auth0/angular-jwt';
 import {HttpClient} from '@angular/common/http';
+import { AuthService } from './core/services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -18,14 +19,12 @@ export class AppComponent implements OnInit {
   extraroles!: string[];
   token!: string;
   expirationDate: any;
-  refreshToken: string | undefined;
+  refreshToken: string;
   events: string[] = [];
 
 
-  // url = 'https://timbrature-panta.coopservice.cloud/api/v1/timbrature';
-
   constructor(private keycloakService: KeycloakService,
-              private httpClient: HttpClient) {
+              private httpClient: HttpClient, private authService: AuthService) {
                 this.refreshToken = '';
     this.keycloakService.keycloakEvents$.subscribe(this.eventHandling.bind(this));
   }
@@ -71,10 +70,10 @@ export class AppComponent implements OnInit {
 
 
   async refreshKeycloak() {
-    if (await this.keycloakService.isLoggedIn()) {
-      this.userDetails = await this.keycloakService.loadUserProfile();
-      this.roles = this.keycloakService.getUserRoles();
-      this.keycloakService.getToken().then(
+    if (await this.authService.isLoggedIn()) {
+      this.userDetails = await this.authService.loadUserProfile();
+      this.roles = this.authService.getUserRoles();
+      this.authService.getToken().then(
         token => {
           this.token = token;
           this.decodedToken = this.helper.decodeToken(token);
@@ -82,20 +81,12 @@ export class AppComponent implements OnInit {
           this.expirationDate = this.helper.getTokenExpirationDate(token);
           this.extraroles = this.decodedToken.extraroles;
         });
-      this.refreshToken = this.checkRefreshToken();
+      this.refreshToken = this.authService.getRefreshToken();
       this.decodedRefreshToken = this.helper.decodeToken(this.refreshToken);
     }
   }
 
-  checkRefreshToken(): string {
-    if (this.keycloakService.getKeycloakInstance().refreshToken) {
-      return `${this.keycloakService.getKeycloakInstance().refreshToken}`;
-    } else {
-      return '';
-    }
-  }
-
   async doLogout() {
-    await this.keycloakService.logout();
+    await this.authService.logout();
   }
 }
