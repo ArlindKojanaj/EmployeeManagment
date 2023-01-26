@@ -16,7 +16,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { DynamicDialogModule } from 'primeng/dynamicdialog';
 import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BasicHttpInterceptor } from './init/basic-http-interceptor';
 import { initializer } from './init/keycloak-init';
 
@@ -40,9 +40,15 @@ import { initializer } from './init/keycloak-init';
     InputTextModule,
     ReactiveFormsModule,
     DynamicDialogModule,
-    KeycloakAngularModule
+    KeycloakAngularModule,
+    HttpClientModule
   ],
   providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: BasicHttpInterceptor,
+      multi: true
+    },
     {
       provide: APP_INITIALIZER,
       useFactory: initializer,
