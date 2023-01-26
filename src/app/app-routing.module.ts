@@ -1,17 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AppAuthGuard } from './init/auth.authguard';
 
 const routes: Routes = [
   {
-    path: 'login',
-    loadChildren: () => import('../app/components/login/login.component').then( m => m.LoginComponent)
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
   },
-  // {
-  //   path: 'home',
-  //   component: HomeComponent,
-  //   canActivate: [AppAuthGuard]
-  // }
+  {
+    path: 'home',
+    component: DashboardComponent,
+    canActivate: [AppAuthGuard]
+  }
 ];
 
 @NgModule({
