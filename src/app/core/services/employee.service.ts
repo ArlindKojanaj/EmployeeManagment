@@ -1,11 +1,9 @@
 import {Injectable} from '@angular/core';
-import {HttpBackend, HttpClient, HttpParams, HttpResponse} from '@angular/common/http';
+import {HttpBackend, HttpClient, HttpResponse} from '@angular/common/http';
 import {Observable} from 'rxjs';
-// import {Commessa} from '../model/commessa';
 import {map} from 'rxjs/operators';
 import { api } from 'src/environments/environment';
 
-export const COMMESSE = 'https://panta.coopservice.it/asset-rs/assets/commesse';
 export const EMPLOYEE = `${api}/employee`;
 
 @Injectable({
@@ -13,10 +11,7 @@ export const EMPLOYEE = `${api}/employee`;
 })
 export class EmployeeService {
 
-
-  constructor(protected http: HttpClient, private httpBackend: HttpBackend) {
-  }
-
+  constructor(protected http: HttpClient, private httpBackend: HttpBackend) {}
 
 //   public commesseNoIntercpetor(): Observable<Commessa []> {
 //     const newHttpClient = new HttpClient(this.httpBackend);
