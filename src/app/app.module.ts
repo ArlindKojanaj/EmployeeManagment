@@ -19,6 +19,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BasicHttpInterceptor } from './init/basic-http-interceptor';
 import { initializer } from './init/keycloak-init';
+import { TabMenuModule } from 'primeng/tabmenu';
+import { MenuModule } from 'primeng/menu';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { initializer } from './init/keycloak-init';
     ReactiveFormsModule,
     DynamicDialogModule,
     KeycloakAngularModule,
-    HttpClientModule
+    HttpClientModule,
+    TabMenuModule,
+    MenuModule
   ],
   providers: [
     {
