@@ -13,6 +13,7 @@ export class DashboardComponent {
   constructor(private employeeService: EmployeeService, private authService: AuthService) { }
 
   ngOnInit(): void {
+    console.log('dashboard');
     this.getEmployeeCount();
   }
 
