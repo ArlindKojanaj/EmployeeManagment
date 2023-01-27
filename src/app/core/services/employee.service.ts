@@ -2,9 +2,9 @@ import {Injectable} from '@angular/core';
 import {HttpBackend, HttpClient, HttpResponse} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
-import { api } from 'src/environments/environment';
 
-export const EMPLOYEE = `${api}employee`;
+export const COMMESSE = 'https://panta.coopservice.it/asset-rs/assets/commesse';
+export const EMPLOYEE = `/employee`;
 
 @Injectable({
   providedIn: 'root'

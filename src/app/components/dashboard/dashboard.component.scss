@@ -1,78 +1,85 @@
-*{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1.2rem;
-}
-
-
-body{
-    background-color:#F9F9F9;
-}
-
-.navbar{
-    padding-top: 3rem;
-    background-color: #F9F9F9;
-}
-
-.link{
-    margin-right: 1.5rem;
-    margin-bottom: 0.3rem;
-    // background-color:#E1FFEE;
-    padding: 0.4rem;
-  
-}
-.li-right{
-    margin-left: 43rem;
-}
-
-.link:hover{
-    // color:#F9F9F9;
-    border: solid 1px white;
-    // background-color: #F9F9F9;
-    background-color:#E1FFEE;
-    border-radius: 10px;
-}
-
-.dash{
+.dashboard-style{
     display: flex;
-    gap: 12rem;
-    justify-items: center;
-    justify-content: center;
+    :first-child{
+        width: 100%;
+    }
 }
 
-.d{
-    margin-top: 5rem;
-    border: 1px solid;
-    border-radius: 20px;
-   box-shadow: inset;
-    height: 8rem;
-    width: 8rem;
+// *{
+//     font-family: 'Times New Roman', Times, serif;
+//     font-size: 1.2rem;
+// }
+
+
+// body{
+//     background-color:#F9F9F9;
+// }
+
+// .navbar{
+//     padding-top: 3rem;
+//     background-color: #F9F9F9;
+// }
+
+// .link{
+//     margin-right: 1.5rem;
+//     margin-bottom: 0.3rem;
+//     // background-color:#E1FFEE;
+//     padding: 0.4rem;
+  
+// }
+// .li-right{
+//     margin-left: 43rem;
+// }
+
+// .link:hover{
+//     // color:#F9F9F9;
+//     border: solid 1px white;
+//     // background-color: #F9F9F9;
+//     background-color:#E1FFEE;
+//     border-radius: 10px;
+// }
+
+// .dash{
+//     display: flex;
+//     gap: 12rem;
+//     justify-items: center;
+//     justify-content: center;
+// }
+
+// .d{
+//     margin-top: 5rem;
+//     border: 1px solid;
+//     border-radius: 20px;
+//    box-shadow: inset;
+//     height: 8rem;
+//     width: 8rem;
     
 
-   text-align: center;
-}
+//    text-align: center;
+// }
 
-.emp-num{
+// .emp-num{
 
-margin-bottom: 1.1rem;
-margin-top: 1.7rem;
-// font-size: 1rem;
-// font-family: sans-serif;
-}
+// margin-bottom: 1.1rem;
+// margin-top: 1.7rem;
+// // font-size: 1rem;
+// // font-family: sans-serif;
+// }
 
-.alert-num{
-    margin-top: 1.7rem;
-    margin-bottom: 1.1rem;
-    // font-size: 1rem;
-}
+// .alert-num{
+//     margin-top: 1.7rem;
+//     margin-bottom: 1.1rem;
+//     // font-size: 1rem;
+// }
 
-a{
- text-decoration: none;
-   color: black; 
-   padding: 0.1rem ;
-   border: solid 1px white;
-   border-radius: 20px;
-//    background-color: aqua;
+// a{
+//  text-decoration: none;
+//    color: black; 
+//    padding: 0.1rem ;
+//    border: solid 1px white;
+//    border-radius: 20px;
+// //    background-color: aqua;
    
 
-}
+// }
 
