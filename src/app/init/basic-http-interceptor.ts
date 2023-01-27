@@ -37,7 +37,7 @@ export class BasicHttpInterceptor implements HttpInterceptor {
     let header: HttpHeaders = request.headers;
     const params: HttpParams = request.params;
 
-    //header = header.set('Access-Control-Allow-Origin', '*');
+    header = header.set('Access-Control-Allow-Origin', '*');
     if (!!token) {
       header = header.set('Authorization', `Bearer ${token}`);
     }
