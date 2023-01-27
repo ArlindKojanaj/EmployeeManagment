@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { KeycloakService } from 'keycloak-angular';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { EmployeeService } from 'src/app/core/services/employee.service';
 

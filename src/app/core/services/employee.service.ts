@@ -4,7 +4,7 @@ import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import { api } from 'src/environments/environment';
 
-export const EMPLOYEE = `${api}/employee`;
+export const EMPLOYEE = `${api}employee`;
 
 @Injectable({
   providedIn: 'root'
