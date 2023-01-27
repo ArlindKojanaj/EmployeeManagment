@@ -25,8 +25,16 @@ jobs:
         run: |
           npm install
           npm run build
+          
       - name: Publish Image
         uses: matootie/github-docker@v3.0.0
         with:
           accessToken: ${{ github.token }}
           contextName: docker/Dockerfile
+          
+      - name: keel update ness
+        uses: n-essio/keelsh-deploy@master
+        with:
+          keelBaseUrl: https://keel.n-ess.it
+          image: ghcr.io/${{ github.repository }}
+          auth: ${{ secrets.KEEL_AUTH }}
