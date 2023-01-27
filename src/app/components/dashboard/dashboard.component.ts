@@ -18,8 +18,8 @@ export class DashboardComponent {
 
   ngOnInit(): void {
     this.items = [
-      {label: 'Dashboard', icon: 'pi pi-fw pi-table'},
-      {label: 'Employe List', icon: 'pi pi-fw pi-list'},
+      {label: 'Dashboard', icon: 'pi pi-fw pi-table',routerLink:'/home'},
+      {label: 'Employe List', icon: 'pi pi-fw pi-list',routerLink:'/list'},
     ];
     
     this.itemsL = [{label: 'Logout', icon: 'pi pi-fw pi-arrow-right', command: () => this.logout()}];
