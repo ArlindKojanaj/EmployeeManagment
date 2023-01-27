@@ -3,10 +3,9 @@ import {HttpBackend, HttpClient, HttpParams, HttpResponse} from '@angular/common
 import {Observable} from 'rxjs';
 // import {Commessa} from '../model/commessa';
 import {map} from 'rxjs/operators';
-import { api } from 'src/environments/environment';
 
 export const COMMESSE = 'https://panta.coopservice.it/asset-rs/assets/commesse';
-export const EMPLOYEE = `${api}/employee`;
+export const EMPLOYEE = `/employee`;
 
 @Injectable({
   providedIn: 'root'
