@@ -21,6 +21,7 @@ import { BasicHttpInterceptor } from './init/basic-http-interceptor';
 import { initializer } from './init/keycloak-init';
 import { TabMenuModule } from 'primeng/tabmenu';
 import { MenuModule } from 'primeng/menu';
+import {TableModule} from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { MenuModule } from 'primeng/menu';
     KeycloakAngularModule,
     HttpClientModule,
     TabMenuModule,
-    MenuModule
+    MenuModule,
+    TableModule
   ],
   providers: [
     {
