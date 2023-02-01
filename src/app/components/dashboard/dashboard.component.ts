@@ -9,12 +9,16 @@ import { MenuItem } from 'primeng/api';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent {
-  
+  count:Number;
   items: MenuItem[];
   itemsL: MenuItem[];
   activeItem: MenuItem;
 
-  constructor(private employeeService: EmployeeService, private authService: AuthService) { this.items = []; this.itemsL = []; this.activeItem = {}; }
+  constructor(private employeeService: EmployeeService, private authService: AuthService) { 
+    this.items = []; 
+    this.itemsL = []; 
+    this.activeItem = {}; 
+    this.count=0}
 
   ngOnInit(): void {
     this.items = [
@@ -36,7 +40,8 @@ export class DashboardComponent {
   getEmployeeCount() {
     this.employeeService.count().subscribe(
       c => {
-        console.log('count', c);
+        // console.log('count', c);
+        this.count=c;
       }
     );
 
