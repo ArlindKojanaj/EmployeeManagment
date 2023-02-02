@@ -18,7 +18,13 @@ items: MenuItem[];
     this.items = []; 
     this.itemsL = []; 
     this.activeItem = {};
-     this.employe=[]}
+     this.employe=[{
+      id:11,
+      firstName:'Test',
+      lastName:'Test',
+      dob:12001,
+      email:'test@test.com'
+     }]}
 
   ngOnInit(): void {
     this.items = [
