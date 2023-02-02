@@ -2,17 +2,23 @@ import { Component } from '@angular/core';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { EmployeeService } from 'src/app/core/services/employee.service';
 import { MenuItem } from 'primeng/api';
+import { Employe } from 'src/app/core/services/employe';
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent {
+  employe:Employe[];
 items: MenuItem[];
   itemsL: MenuItem[];
   activeItem: MenuItem;
 
-  constructor(private employeeService: EmployeeService, private authService: AuthService) { this.items = []; this.itemsL = []; this.activeItem = {}; }
+  constructor(private employeeService: EmployeeService, private authService: AuthService) { 
+    this.items = []; 
+    this.itemsL = []; 
+    this.activeItem = {};
+     this.employe=[]}
 
   ngOnInit(): void {
     this.items = [
@@ -31,5 +37,5 @@ items: MenuItem[];
     this.authService.logout();
   }
 
-  
+
 }
