@@ -24,6 +24,12 @@ items: MenuItem[];
       lastName:'Test',
       dob:12001,
       email:'test@test.com'
+     },{
+      id:11,
+      firstName:'Test',
+      lastName:'Test',
+      dob:12001,
+      email:'test@test.com'
      }]}
 
   ngOnInit(): void {
