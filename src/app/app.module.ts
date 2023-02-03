@@ -22,6 +22,7 @@ import { initializer } from './init/keycloak-init';
 import { TabMenuModule } from 'primeng/tabmenu';
 import { MenuModule } from 'primeng/menu';
 import {TableModule} from 'primeng/table';
+import {CardModule} from 'primeng/card';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import {TableModule} from 'primeng/table';
     HttpClientModule,
     TabMenuModule,
     MenuModule,
-    TableModule
+    TableModule,
+    CardModule
   ],
   providers: [
     {
