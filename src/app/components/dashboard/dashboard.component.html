@@ -8,8 +8,16 @@
   </div>
 </div>
 
-<div>{{count}}</div>
+<!-- <div>{{count}}</div> -->
+<div class="flex"  >
 
+  <p-card header=".......Employees"  [style]="{width: '300px',height:'190px'}" styleClass="shadow-2">
+    <ng-template pTemplate="header">
+      <img alt="Card" src="../../../assets/empl.png" [style]="{width: '80px',height:'60px'}" >
+    </ng-template>
+    <h3 > {{count}}</h3>
+  </p-card>
+</div>
 <!-- <body>
   <nav class="navbar" >  
     <a class="link li-right" >Dashboard</a>
