@@ -10,7 +10,7 @@
 
 <div class="flex" >
   <h2>Employees</h2>
-  <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-succes p-button-text" title="Add new employee" ></button>
+  <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-succes p-button-text" title="Add new employee" (click)="showform()" ></button>
 </div>
 
   <p-table [value]="employe" >
@@ -31,4 +31,10 @@
       </tr>
    </ng-template>
   </p-table>
+
+
+  <div *ngIf="addmode" class="overlay " >  
+    <app-add></app-add>
+  </div>
+
 
