@@ -3,13 +3,13 @@ import { AuthService } from 'src/app/core/services/auth.service';
 import { EmployeeService } from 'src/app/core/services/employee.service';
 import { MenuItem } from 'primeng/api';
 import { Employe } from 'src/app/core/services/employe';
-import { Injectable } from '@angular/core';
+// import { Injectable } from '@angular/core';
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss']
 })
-@Injectable()
+// @Injectable()
 export class ListComponent {
   employe:Employe[];
   items: MenuItem[];
