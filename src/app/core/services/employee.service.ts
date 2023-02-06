@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpBackend, HttpClient, HttpResponse} from '@angular/common/http';
-import {Observable} from 'rxjs';
+import {Observable, Subject} from 'rxjs';
 import {map} from 'rxjs/operators';
 import { api } from 'src/environments/environment';
 import { Employe } from './employe';
@@ -54,6 +54,8 @@ export class EmployeeService {
 //     );
 //   }
 
+
+
 private employe:Employe[]=[{
   id:11,
   firstName:'Test',
@@ -72,4 +74,11 @@ private employe:Employe[]=[{
  getRecipes() {
   return this.employe.slice();
  }
+
+ addEmployee(employ:Employe){
+  this.employe.push(employ)
+
+ }
+
+ 
 }
