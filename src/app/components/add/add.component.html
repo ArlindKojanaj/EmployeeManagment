@@ -1,30 +1,37 @@
 
+<form [formGroup]="employeeForm"  (ngSubmit)="onSubmit()" >
+
 <div class="center" >
-    <h2>New Employye</h2>
+    <h2>New Employee</h2>
 
 
     <div class="p-field">
-        <label for="username2">FirstName</label>
-        <input id="first" type="firstname"  class="p-invalid" pInputText />
+        <label for="firstname">FirstName</label>
+        <input id="firstname" type="firstname" formControlName="firstName" class="p-invalid" pInputText />
 
     </div>
 
     <div class="p-field">
-        <label for="username2">LastName</label>
-        <input id="username2" type="lastname"  class="p-invalid" pInputText />
+        <label for="lastname">LastName</label>
+        <input id="lastname" type="text" formControlName="lastName" class="p-invalid" pInputText />
        
     </div>
     <div class="p-field">
-        <label for="username2">Date of dirth</label>
-        <input id="username2" type="dateofbirth"  class="p-invalid" pInputNumber />
+        <label for="dob">Date of dirth</label>
+        <input id="dob" type="number"  class="p-invalid" formControlName="dob" pInputNumber />
        
     </div>
     <div class="p-field">
-        <label for="username2">LastName</label>
-        <input id="username2" type="lastname"  class="p-invalid" pInputText />
+        <label for="email">Email</label>
+        <input id="email" type="email"  class="p-invalid" formControlName="email"  pInputText />
        
     </div>
+     
 
     <button pButton type="button" label="Close" class="p-button-outlined"  (click)="onclose()" ></button>
+    <button pButton type="button" label="Save" class="p-button-outlined" type="submit"
+    class="btn btn-success"
+    [disabled]="!employeeForm.valid"></button>
 
     </div>
+</form>
