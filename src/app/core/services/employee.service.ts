@@ -3,6 +3,7 @@ import {HttpBackend, HttpClient, HttpResponse} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import { api } from 'src/environments/environment';
+import { Employe } from './employe';
 
 export const EMPLOYEE = `${api}/employee`;
 
@@ -53,4 +54,22 @@ export class EmployeeService {
 //     );
 //   }
 
+private employe:Employe[]=[{
+  id:11,
+  firstName:'Test',
+  lastName:'Test',
+  dob:12001,
+  email:'test@test.com'
+ },{
+  id:11,
+  firstName:'Test',
+  lastName:'Test',
+  dob:12001,
+  email:'test@test.com'
+ }]
+
+
+ getRecipes() {
+  return this.employe.slice();
+ }
 }

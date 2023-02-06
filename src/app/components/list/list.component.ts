@@ -11,7 +11,7 @@ import { Employe } from 'src/app/core/services/employe';
 })
 
 export class ListComponent {
-  employe:Employe[];
+  employe:Employe[]=[]
   items: MenuItem[];
   itemsL: MenuItem[];
   activeItem: MenuItem;
@@ -21,19 +21,7 @@ export class ListComponent {
     this.items = []; 
     this.itemsL = []; 
     this.activeItem = {};
-     this.employe=[{
-      id:11,
-      firstName:'Test',
-      lastName:'Test',
-      dob:12001,
-      email:'test@test.com'
-     },{
-      id:11,
-      firstName:'Test',
-      lastName:'Test',
-      dob:12001,
-      email:'test@test.com'
-     }]}
+}
 
   ngOnInit(): void {
     this.items = [
@@ -45,7 +33,7 @@ export class ListComponent {
 
     this.activeItem = this.items[0];
   
-    
+    this.employe=this.employeeService.getRecipes()
   }
 
   logout() {
