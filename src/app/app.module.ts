@@ -23,6 +23,7 @@ import { TabMenuModule } from 'primeng/tabmenu';
 import { MenuModule } from 'primeng/menu';
 import {TableModule} from 'primeng/table';
 import {CardModule} from 'primeng/card';
+import { ListEmployeeDetailComponent } from './components/list/list-employee-detail/list-employee-detail.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {CardModule} from 'primeng/card';
     ListComponent,
     FormComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    ListEmployeeDetailComponent
   ],
   imports: [
     BrowserModule,
