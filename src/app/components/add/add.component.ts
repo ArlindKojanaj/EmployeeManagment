@@ -28,8 +28,8 @@ onclose(){
 
 onSubmit(){
   this.empService.addEmployee(this.employeeForm.value)
-  // this.router.navigate(['/home']);
-  // this.ls.addmode=false
+  this.router.navigate(['/home']);
+  this.ls.addmode=false
 }
 
 
