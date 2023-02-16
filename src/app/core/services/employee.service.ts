@@ -71,7 +71,7 @@ private employe:Employe[]=[{
  }]
 
 
- getRecipes() {
+ getEmployye() {
   return this.employe.slice();
  }
 
@@ -79,6 +79,7 @@ private employe:Employe[]=[{
   this.employe.push(employ)
 
  }
+
 
  
 }

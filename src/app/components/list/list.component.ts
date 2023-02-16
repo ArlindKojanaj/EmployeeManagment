@@ -33,7 +33,7 @@ export class ListComponent {
 
     this.activeItem = this.items[0];
   
-    this.employe=this.employeeService.getRecipes()
+    this.employe=this.employeeService.getEmployye()
   }
 
   logout() {
