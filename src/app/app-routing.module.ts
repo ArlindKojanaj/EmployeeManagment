@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AppAuthGuard } from './init/auth.authguard';
 import { ListComponent } from './components/list/list.component';
+import { AddComponent } from './components/add/add.component';
 
 const routes: Routes = [
   {
@@ -18,7 +19,13 @@ const routes: Routes = [
   {
     path: 'list',
     component:ListComponent,
-    canActivate: [AppAuthGuard]
+    canActivate: [AppAuthGuard],
+    
+    children:[{
+      path:'new',
+      component:AddComponent,
+      canActivate:[AppAuthGuard]
+    }]
   }
 ];
 

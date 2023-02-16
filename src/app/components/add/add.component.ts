@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ListComponent } from '../list/list.component';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { EmployeeService } from 'src/app/core/services/employee.service';
-import { Route, Router } from '@angular/router';
+import { ActivatedRoute,  Router } from '@angular/router';
 
 @Component({
   selector: 'app-add',
@@ -14,7 +13,7 @@ export class AddComponent implements OnInit {
 
  employeeForm!:FormGroup;
 
- constructor(private ls:ListComponent,private empService:EmployeeService,private router:Router){}
+ constructor(private empService:EmployeeService,private router:Router,private route:ActivatedRoute){}
 
  ngOnInit() {
    this.initForm()
@@ -22,14 +21,16 @@ export class AddComponent implements OnInit {
 
 
 onclose(){
-  this.ls.addmode=false
-  
+ 
+    this.router.navigate(['/list'])
+
+ 
 }
 
 onSubmit(){
   this.empService.addEmployee(this.employeeForm.value)
-  this.router.navigate(['/home']);
-  this.ls.addmode=false
+  this.router.navigate(['/list']);
+  
 }
 
 

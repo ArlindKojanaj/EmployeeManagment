@@ -12,6 +12,8 @@ export const EMPLOYEE = `${api}/employee`;
 })
 export class EmployeeService {
 
+  employeeChanged=new Subject<Employe[]>()
+
   constructor(protected http: HttpClient, private httpBackend: HttpBackend) {}
 
 //   public commesseNoIntercpetor(): Observable<Commessa []> {
@@ -77,6 +79,7 @@ private employe:Employe[]=[{
 
  addEmployee(employ:Employe){
   this.employe.push(employ)
+  this.employeeChanged.next(this.employe.slice())
 
  }
 

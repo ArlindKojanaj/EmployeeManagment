@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { EmployeeService } from 'src/app/core/services/employee.service';
 import { MenuItem } from 'primeng/api';
 import { Employe } from 'src/app/core/services/employe';
+import {  Router,ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-list',
@@ -10,14 +12,15 @@ import { Employe } from 'src/app/core/services/employe';
   styleUrls: ['./list.component.scss']
 })
 
-export class ListComponent {
+export class ListComponent implements OnInit {
   employe:Employe[]=[]
   items: MenuItem[];
   itemsL: MenuItem[];
   activeItem: MenuItem;
-  addmode:boolean=false
+  subscription:Subscription=new Subscription
+  
 
-  constructor(private employeeService: EmployeeService, private authService: AuthService) { 
+  constructor(private employeeService: EmployeeService, private authService: AuthService,private router:Router,private route:ActivatedRoute)  { 
     this.items = []; 
     this.itemsL = []; 
     this.activeItem = {};
@@ -32,6 +35,13 @@ export class ListComponent {
     this.itemsL = [{label: 'Logout', icon: 'pi pi-fw pi-arrow-right', command: () => this.logout()}];
 
     this.activeItem = this.items[0];
+
+    this.subscription = this.employeeService.employeeChanged
+      .subscribe(
+        (emp: Employe[]) => {
+          this.employe = emp;
+        }
+      );
   
     this.employe=this.employeeService.getEmployye()
   }
@@ -41,7 +51,8 @@ export class ListComponent {
   }
 
   showform() {
-    this.addmode=true
+    this.router.navigate(['new'],{relativeTo:this.route})
+
   }
 
 
