@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+import { Component,OnDestroy,OnInit } from '@angular/core';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { EmployeeService } from 'src/app/core/services/employee.service';
 import { MenuItem } from 'primeng/api';
@@ -12,7 +12,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./list.component.scss']
 })
 
-export class ListComponent implements OnInit {
+export class ListComponent implements OnInit,OnDestroy {
   employe:Employe[]=[]
   items: MenuItem[];
   itemsL: MenuItem[];
@@ -25,6 +25,7 @@ export class ListComponent implements OnInit {
     this.itemsL = []; 
     this.activeItem = {};
 }
+ 
 
   ngOnInit(): void {
     this.items = [
@@ -42,6 +43,7 @@ export class ListComponent implements OnInit {
           this.employe = emp;
         }
       );
+      
   
     this.employe=this.employeeService.getEmployye()
   }
@@ -55,5 +57,8 @@ export class ListComponent implements OnInit {
 
   }
 
+  ngOnDestroy(): void {
+   this.subscription.unsubscribe()
+  }
 
 }
