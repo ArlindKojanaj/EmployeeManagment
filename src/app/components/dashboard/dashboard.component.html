@@ -12,50 +12,43 @@
     ></button>
   </div>
 </div>
-
 <!-- <div>{{count}}</div> -->
 <div
   style="
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-  "
->
+    height: 100vh;">
+<div class=" cards">
   <p-card
-    header="Employees"
     [style]="{ width: '300px', height: '190px', margin: '0 20px' }"
     styleClass="shadow-2"
     routerLink="/list"
-    title="Click here to show employee list"
-  >
+    title="Click here to show employee list">
     <ng-template pTemplate="header">
       <img
         alt="Card"
         src="../../../assets/employee.png"
-        [style]="{ width: '80px', height: '60px' }"
-      />
+        [style]="{ width: '80px', height: '60px' }"/>
+      <h1>Employees</h1>
+      <h1>{{ count }}</h1>
     </ng-template>
-    <h3>{{ count }}</h3>
   </p-card>
   <p-card
-    header="Alerts"
-    [style]="{ width: '300px', height: '190px', margin: '0 200px' }"
+    [style]="{ width: '300px', height:'190px',margin:'0 50px'}"
     styleClass="shadow-2"
-    routerLink="/list"
-    title="Click here to show the Alerts"
-  >
+    title="Click here to show Alerts">
     <ng-template pTemplate="header">
       <img
         alt="Card"
         src="../../../assets/louds.png"
-        [style]="{ width: '80px', height: '60px' }"
-      />
+        [style]="{ width: '80px', height: '60px'}"/>
+      <h1>Alerts</h1>
+      <h1>{{ count }}</h1>
     </ng-template>
-    <h3>{{ count }}</h3>
   </p-card>
 </div>
-
+</div>
 <!-- <body>
   <nav class="navbar" >  
     <a class="link li-right" >Dashboard</a>

@@ -4,14 +4,23 @@
     width: 100%;
   }
 }
-h3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .flex {
   margin-top: 70px;
   margin-left: 40px;
+}
+img{
+ margin-left: 105px;
+}
+h1{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+.cards{
+  display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 100px;
+    justify-items: center;
 }
 // *{
 
