@@ -3,45 +3,28 @@
 
 <form [formGroup]="employeeForm"  (ngSubmit)="onSubmit()" >
 
-<div class="center" >
-    <h2>New Employee</h2>
-
- <div class="flex flexmarg"> 
+    <div class="center" >
+        <h2>New Employee</h2>
     
-    <div class="p-field">
-        <label for="firstname">FirstName</label>
-        <input id="firstname" type="firstname" formControlName="firstName" class="p-invalid" pInputText />
-
+        <div class="flex flexmarg"> 
+            <div class="p-field center-labels">
+                <div class="grid-container">
+                    <label for="firstname">FirstName</label>
+                    <input id="firstname" type="firstname" formControlName="firstName" class="p-invalid" pInputText />
+                    <label for="lastname">LastName</label>
+                    <input id="lastname" type="text" formControlName="lastName" class="p-invalid" pInputText />
+                    <label for="dob">Date of Birth</label>
+                    <input id="dob" type="number"  class="p-invalid" formControlName="dob" pInputText />
+                    <label for="email">Email</label>
+                    <input id="email" type="email"  class="p-invalid" formControlName="email"  pInputText />
+                </div>
+            </div> 
+        </div>
+    
+        <button pButton type="button" label="Close" class="p-button-outlined btn"  (click)="onclose()"></button>
+        <button pButton type="button" label="Save" class="p-button-outlined" type="submit" class="btn btn-success" [disabled]="!employeeForm.valid"></button>
     </div>
 
-    <div class="p-field">
-        <label for="lastname">LastName</label>
-        <input id="lastname" type="text" formControlName="lastName" class="p-invalid" pInputText />
-       
-    </div>
- </div>
-
- <div class="flex">
-
-     <div class="p-field">
-         <label for="dob">Date of dirth</label>
-        <input id="dob" type="number"  class="p-invalid" formControlName="dob" pInputText />
-       
-    </div>
-    <div class="p-field">
-        <label for="email">Email</label>
-        <input id="email" type="email"  class="p-invalid" formControlName="email"  pInputText />
-       
-    </div>
-     
-</div>
-
-    <button pButton type="button" label="Close" class="p-button-outlined btn"  (click)="onclose()" ></button>
-    <button pButton type="button" label="Save" class="p-button-outlined" type="submit"
-    class="btn btn-success"
-    [disabled]="!employeeForm.valid"></button>
-
-</div>
 </form>
 
 </div>

@@ -4,20 +4,58 @@
   </div>
   <div>
     <p-menu #menu [popup]="true" [model]="itemsL"></p-menu>
-    <button type="button" pButton icon="pi pi-list" (click)="menu.toggle($event)"></button>
+    <button
+      type="button"
+      pButton
+      icon="pi pi-list"
+      (click)="menu.toggle($event)"
+    ></button>
   </div>
 </div>
 
 <!-- <div>{{count}}</div> -->
-<div class="flex"  >
-
-  <p-card header=".......Employees"  [style]="{width: '300px',height:'190px'}" styleClass="shadow-2" routerLink="/list" title="click to see employee list" >
+<div
+  style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  "
+>
+  <p-card
+    header="Employees"
+    [style]="{ width: '300px', height: '190px', margin: '0 20px' }"
+    styleClass="shadow-2"
+    routerLink="/list"
+    title="Click here to show employee list"
+  >
     <ng-template pTemplate="header">
-      <img alt="Card" src="../../../assets/empl.png" [style]="{width: '80px',height:'60px'}" >
+      <img
+        alt="Card"
+        src="../../../assets/employee.png"
+        [style]="{ width: '80px', height: '60px' }"
+      />
     </ng-template>
-    <h3 > {{count}}</h3>
+    <h3>{{ count }}</h3>
+  </p-card>
+  <p-card
+    header="Alerts"
+    [style]="{ width: '300px', height: '190px', margin: '0 200px' }"
+    styleClass="shadow-2"
+    routerLink="/list"
+    title="Click here to show the Alerts"
+  >
+    <ng-template pTemplate="header">
+      <img
+        alt="Card"
+        src="../../../assets/louds.png"
+        [style]="{ width: '80px', height: '60px' }"
+      />
+    </ng-template>
+    <h3>{{ count }}</h3>
   </p-card>
 </div>
+
 <!-- <body>
   <nav class="navbar" >  
     <a class="link li-right" >Dashboard</a>
