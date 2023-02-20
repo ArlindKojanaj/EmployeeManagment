@@ -14,7 +14,8 @@
                     <label for="lastname">LastName</label>
                     <input id="lastname" type="text" formControlName="lastName" class="p-invalid" pInputText />
                     <label for="dob">Date of Birth</label>
-                    <input id="dob" type="number"  class="p-invalid" formControlName="dob" pInputText />
+                    <input type="date" id="dob" min="2004-01-01" class="p-invalid" formControlName="dob" pInputText >
+
                     <label for="email">Email</label>
                     <input id="email" type="email"  class="p-invalid" formControlName="email"  pInputText />
                 </div>
