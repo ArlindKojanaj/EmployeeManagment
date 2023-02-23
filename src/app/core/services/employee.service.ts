@@ -58,23 +58,20 @@ export class EmployeeService {
 
 
 
-private employe:Employe[]=[{
-  id:11,
-  firstName:'Test',
-  lastName:'Test',
-  dob:12001,
-  email:'test@test.com'
- },{
-  id:11,
-  firstName:'Test',
-  lastName:'Test',
-  dob:12001,
-  email:'test@test.com'
- }]
+private employe:Employe[]=[
+  new Employe(
+    'tesi','test',200,'vlora@VideoColorSpace.com'
+  ), new Employe(
+    'testtt','testtttt',200,'vloraaaa@VideoColorSpace.com')
+]
 
 
  getEmployye() {
   return this.employe.slice();
+ }
+
+ getEmploye(index:number){
+   return this.employe[index]
  }
 
  addEmployee(employ:Employe){
