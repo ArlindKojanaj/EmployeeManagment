@@ -7,8 +7,8 @@ export class Employe {
     public  dob: number
     public email: string
 
-    constructor(firName: string, laName: string, dbirth: number, emaiil:string) {
-      this.firstName =firName ;
+    constructor(firstName: string, laName: string, dbirth: number, emaiil:string) {
+      this.firstName =firstName ;
       this.lastName = laName;
       this.dob = dbirth;
       this.email = emaiil;
