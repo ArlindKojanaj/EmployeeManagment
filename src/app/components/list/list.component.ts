@@ -1,4 +1,4 @@
-import { Component,OnDestroy,OnInit } from '@angular/core';
+import { Component,Input,OnDestroy,OnInit } from '@angular/core';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { EmployeeService } from 'src/app/core/services/employee.service';
 import { MenuItem } from 'primeng/api';
@@ -18,6 +18,8 @@ export class ListComponent implements OnInit,OnDestroy {
   itemsL: MenuItem[];
   activeItem: MenuItem;
   subscription:Subscription=new Subscription
+  @Input() i:number
+
   
 
   constructor(private employeeService: EmployeeService, private authService: AuthService,private router:Router,private route:ActivatedRoute)  { 
@@ -46,6 +48,7 @@ export class ListComponent implements OnInit,OnDestroy {
       
   
     this.employe=this.employeeService.getEmployye()
+    
   }
 
   logout() {

@@ -13,8 +13,8 @@
   <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-succes p-button-text" title="Add new employee" (click)="showform()" ></button>
 </div>
 
-  <p-table [value]="employe" >
-    <ng-template pTemplate="header">
+  <table  >
+   
       <tr>
           <th>Name</th>
           <th>SurName</th>
@@ -22,17 +22,18 @@
           <th>Email</th>
           <th>Detail</th>
       </tr>
-  </ng-template>
-  <ng-template pTemplate="body" let-employes>
-      <tr>
+ 
+      <tr *ngFor="let employes of employe;let i=index">
           <td>{{employes.firstName}}</td>
           <td>{{employes.lastName}}</td>
           <td>{{employes.dob}}</td>
           <td>{{employes.email}}</td>
-          <td><button type="button" style="border-radius: 50%;">Detail</button></td>
+          
+          <td><button type="button" style="border-radius: 50%;"  
+            [routerLink]=[i] >Detail</button></td>
         </tr>
-   </ng-template>
-  </p-table>
+   
+  </table>
 
 
 <router-outlet ></router-outlet>

@@ -4,6 +4,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AppAuthGuard } from './init/auth.authguard';
 import { ListComponent } from './components/list/list.component';
 import { AddComponent } from './components/add/add.component';
+import { ListEmployeeDetailComponent } from './components/list/list-employee-detail/list-employee-detail.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,8 @@ const routes: Routes = [
       path:'new',
       component:AddComponent,
       canActivate:[AppAuthGuard]
+    },{
+      path:':id',component:ListEmployeeDetailComponent,canActivate:[AppAuthGuard]
     }]
   }
 ];
