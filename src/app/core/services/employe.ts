@@ -1,10 +1,18 @@
-export interface Employe {
+export class Employe {
+
     
-    "id": number,
-    "firstName": string,
-    "lastName": string,
-    "dob": number,
-    "email": string,
+  //  public id: number,
+    public firstName: string
+    public lastName: string
+    public  dob: number
+    public email: string
+
+    constructor(firName: string, laName: string, dbirth: number, emaiil:string) {
+      this.firstName =firName ;
+      this.lastName = laName;
+      this.dob = dbirth;
+      this.email = emaiil;
+    }
     // "phone": string,
     // "address": string,
     // "city": string,
