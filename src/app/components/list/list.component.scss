@@ -4,26 +4,34 @@
         width: 100%;
     }
 }
-
 .flex{
     display: flex;
     gap: 0.3rem;
     align-items: center;
 }
-
-
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
   }
-  
   td, th {
     border: 1px solid #dddddd;
-    text-align: left;
+    text-align: center;
     padding: 8px;
   }
-  
   tr:nth-child(even) {
     background-color: #dddddd;
   }
+  .rounded-outline-blue {
+    border-radius: 20px;
+    background-color: transparent;
+    padding: 10px 20px;
+    border: 1px solid #3b82f6;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .rounded-outline-blue:hover {
+    background-color:#3b82f6;
+    color: #fff;
+  }
+  

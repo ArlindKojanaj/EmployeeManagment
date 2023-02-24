@@ -20,7 +20,7 @@
           <th>SurName</th>
           <th>Date Of Birth</th>
           <th>Email</th>
-          <th>Detail</th>
+          <th></th>
       </tr>
  
       <tr *ngFor="let employes of employe;let i=index">
@@ -29,8 +29,8 @@
           <td>{{employes.dob}}</td>
           <td>{{employes.email}}</td>
           
-          <td><button type="button" style="border-radius: 50%;"  
-            [routerLink]=[i] >Detail</button></td>
+          <td><button p class="rounded-outline-blue "  
+            [routerLink]=[i] >Details</button></td> 
         </tr>
    
   </table>
