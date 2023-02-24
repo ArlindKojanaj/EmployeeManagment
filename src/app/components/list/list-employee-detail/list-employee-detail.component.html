@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html>
-
 <body  class="overlay" >
-
     <div class="center" >
- 
       <h2>Employee Details</h2>
       <table>
         <tr>
            <th>FirstName</th>
            <th>LastName</th>
-           <th>B-Day</th>
+           <th>Date of Birth</th>
            <th>Email</th>
         </tr>
         <tr>
@@ -18,14 +15,13 @@
             <td>{{employe.lastName}}</td>
             <td>{{employe.dob}}</td>
             <td>{{employe.email}}</td>
-    
         </tr>
-
        </table>
 
-   <!-- <button type="button" (click)="onEdit()" >Edit</button> -->
-   <!-- <button type="button" (click)="onNavigate()" >Close</button> -->
-   <button pButton type="button" label="Edit" class="p-button-outlined btn"  (click)="onEdit()"></button>
-   <button pButton type="button" label="Close" class="p-button-outlined" type="submit" class="btn btn-success"(click)="onNavigate()" ></button>
+       <div class="button-container">
+        <button button p class="rounded-outline-blue " (click)="onNavigate()">Close</button>
+        <button button p class="rounded-outline-blue " (click)="onNavigate()">Edit</button>
+    </div>
+
   </div>
   

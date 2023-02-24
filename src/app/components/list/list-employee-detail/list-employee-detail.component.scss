@@ -3,17 +3,16 @@ table {
     border-collapse: collapse;
     width: 100%;
   }
-  
   td, th {
     border: 1px solid #dddddd;
     text-align: left;
-    padding: 8px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
   }
-  
   tr:nth-child(even) {
     background-color: #dddddd;
   }
-
   .overlay {
     position: fixed;
     top: 0;
@@ -25,8 +24,6 @@ table {
     z-index: 100;
     transition: all 0.5s;
   }
-  
-
   .center{
     text-align: center;
     position: fixed;
@@ -41,3 +38,23 @@ table {
     z-index: 1000;
     transition: all 0.5s;
 }
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+  .rounded-outline-blue {
+    border-radius: 20px;
+    background-color: transparent;
+    margin-right: 20px;
+    padding: 10px 20px;
+    border: 1px solid #3b82f6;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .rounded-outline-blue:hover {
+    background-color:#3b82f6;
+    color: #fff;
+  }
+  
