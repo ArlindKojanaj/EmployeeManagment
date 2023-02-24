@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { EmployeeService } from 'src/app/core/services/employee.service';
-import { ActivatedRoute,  Router } from '@angular/router';
+import { ActivatedRoute,  Params,  Router } from '@angular/router';
+import { Employe } from 'src/app/core/services/employe';
 
 @Component({
   selector: 'app-add',
@@ -12,11 +13,20 @@ import { ActivatedRoute,  Router } from '@angular/router';
 export class AddComponent implements OnInit {
 
  employeeForm!:FormGroup;
-
+ id:number
+ editMode=false
  constructor(private empService:EmployeeService,private router:Router,private route:ActivatedRoute){}
 
  ngOnInit() {
-   this.initForm()
+   
+   this.route.params.
+   subscribe(
+    (params:Params)=>{
+    this.id=+params['id']
+    this.editMode=params['id'] != null
+    // console.log(this.editMode)
+    this.initForm()
+   })
  }
 
 
@@ -28,7 +38,12 @@ onclose(){
 }
 
 onSubmit(){
-  this.empService.addEmployee(this.employeeForm.value)
+  if(this.editMode){
+    this.empService.updateEmployee(this.id,this.employeeForm.value)
+  }
+  else{
+    this.empService.addEmployee(this.employeeForm.value)
+  }
   this.router.navigate(['/list']);
   
 }
@@ -37,8 +52,16 @@ onSubmit(){
 private initForm() {
   let firstName = '';
   let lastName = '';
-  let dob = '';
+  let dob=0;
   let email=''
+
+  if(this.editMode){
+    const employeee=this.empService.getEmploye(this.id)
+    firstName=employeee.firstName
+    lastName=employeee.lastName
+    dob=employeee.dob
+    email=employeee.email
+  }
 
   this.employeeForm = new FormGroup({
     firstName: new FormControl(firstName, Validators.required),

@@ -28,6 +28,8 @@ const routes: Routes = [
       canActivate:[AppAuthGuard]
     },{
       path:':id',component:ListEmployeeDetailComponent,canActivate:[AppAuthGuard]
+    },{
+      path:':id/edit',component:AddComponent,canActivate:[AppAuthGuard]
     }]
   }
 ];

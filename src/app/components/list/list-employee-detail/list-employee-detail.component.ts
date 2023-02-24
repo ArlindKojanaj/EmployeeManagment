@@ -12,18 +12,23 @@ export class ListEmployeeDetailComponent implements OnInit {
   employe:Employe
   id:number;
    
-  constructor(private route:ActivatedRoute,private emplyeeService:EmployeeService,private router:Router ){}
+  constructor(private route:ActivatedRoute,
+              private emplyeeService:EmployeeService,
+              private router:Router ){}
 
   ngOnInit(): void {
     this.route.params.subscribe((params:Params)=>{
     this.id=+params['id']
     this.employe=this.emplyeeService.getEmploye(this.id)
-    console.log(this.employe)
+    // console.log(this.employe)
     })
   }
 
   onNavigate(){
     this.router.navigate(['/list'])
 
+  }
+  onEdit(){
+    this.router.navigate(['edit'],{relativeTo:this.route})
   }
 }

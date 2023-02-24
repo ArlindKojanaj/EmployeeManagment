@@ -77,7 +77,11 @@ private employe:Employe[]=[
  addEmployee(employ:Employe){
   this.employe.push(employ)
   this.employeeChanged.next(this.employe.slice())
+}
 
+ updateEmployee(index:number,editEmployee:Employe){
+  this.employe[index]=editEmployee
+  this.employeeChanged.next(this.employe.slice())
  }
 
 
