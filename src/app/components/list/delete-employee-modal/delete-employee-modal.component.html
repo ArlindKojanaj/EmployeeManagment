@@ -4,24 +4,22 @@
   </head>
 <body class="overlay">
 	<div class="center">
-		<h2>You're DELETING {{employe.firstName}} {{employe.lastName}}</h2>
+		<h3>You're DELETING {{employe.firstName}} {{employe.lastName}}</h3>
 		<div class="secoverlay">
 			<div class="box">
         <div>
-          <label for="dob">Resignation Date</label>
+          <label for="dob">Resignation Date:</label>
           <input type="date" id="dob" min="2004-01-01" class="p-invalid" formControlName="dob" pInputText >
         </div>
         <div>
-          <label for="dob">Resignation Period</label>
-          <input type="date" id="dob" min="2004-01-01" class="p-invalid" formControlName="dob" pInputText >
+          <label for="dob">Resignation Period:</label>
+          <input type="number" id="number" class="p-invalid" formControlName="dob"pInputText>
         </div>
+          <button button p class="rounded-outline-blue  "(click)="onNavigate()" >Cancel</button>
+          <button button p class="rounded-outline-blue " (click)="onDeleteRecipe()"  >Confirm</button>
 			</div>
-
-      <div class="button-container">
-        <button button p class="rounded-outline-blue  "(click)="onNavigate()" >Cancel</button>
-        <button button p class="rounded-outline-blue " (click)="onDeleteRecipe()"  >Confirm</button>
-      </div>
 		</div>
 	</div>
+  
 </body>
 </html>
