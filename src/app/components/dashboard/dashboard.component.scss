@@ -1,8 +1,10 @@
 .dashboard-style {
   display: flex;
-  :first-child {
-    width: 100%;
-  }
+  align-items: flex-end;
+  justify-content: end;
+}
+.full-border{
+  border-bottom: 2px solid black;
 }
 .flex {
   margin-top: 70px;

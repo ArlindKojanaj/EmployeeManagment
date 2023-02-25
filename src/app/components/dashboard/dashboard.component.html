@@ -1,15 +1,6 @@
-<div class="dashboard-style">
+<div class="dashboard-style full-border">
   <div>
     <p-tabMenu [model]="items" [activeItem]="items[0]"></p-tabMenu>
-  </div>
-  <div>
-    <p-menu #menu [popup]="true" [model]="itemsL"></p-menu>
-    <button
-      type="button"
-      pButton
-      icon="pi pi-list"
-      (click)="menu.toggle($event)"
-    ></button>
   </div>
 </div>
 <!-- <div>{{count}}</div> -->
