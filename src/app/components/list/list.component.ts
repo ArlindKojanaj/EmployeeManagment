@@ -63,5 +63,7 @@ export class ListComponent implements OnInit,OnDestroy {
   ngOnDestroy(): void {
    this.subscription.unsubscribe()
   }
-
+  deleteEmployee(index: number) {
+    this.employe.splice(index, 1);
+  }
 }

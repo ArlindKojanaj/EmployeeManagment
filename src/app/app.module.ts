@@ -24,6 +24,7 @@ import { MenuModule } from 'primeng/menu';
 import {TableModule} from 'primeng/table';
 import {CardModule} from 'primeng/card';
 import { ListEmployeeDetailComponent } from './components/list/list-employee-detail/list-employee-detail.component';
+import { DeleteEmployeeModalComponent } from './components/list/delete-employee-modal/delete-employee-modal.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ListEmployeeDetailComponent } from './components/list/list-employee-det
     FormComponent,
     LoginComponent,
     DashboardComponent,
-    ListEmployeeDetailComponent
+    ListEmployeeDetailComponent,
+    DeleteEmployeeModalComponent
   ],
   imports: [
     BrowserModule,
