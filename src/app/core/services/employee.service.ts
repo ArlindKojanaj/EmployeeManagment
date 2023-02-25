@@ -84,6 +84,9 @@ private employe:Employe[]=[
   this.employeeChanged.next(this.employe.slice())
  }
 
-
+ deleteEmployee(index: number) {
+  this.employe.splice(index, 1);
+  this.employeeChanged.next(this.employe.slice());
+}
  
 }
