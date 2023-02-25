@@ -24,7 +24,7 @@
             </div>
         </div>
         <button button p class="rounded-outline-blue" (click)="onclose()">Cancel</button>
-        <button button p class="rounded-outline-blue " type="submit" [disabled]="!employeeForm.valid">Save</button>
+        <button button p class="rounded-outline-blue " type="submit" [disabled]="!employeeForm.valid"> {{ editMode ? 'Update' : 'Save' }}</button>
     </div>
 
 </form>
