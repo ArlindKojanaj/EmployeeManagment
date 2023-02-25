@@ -31,4 +31,9 @@ export class ListEmployeeDetailComponent implements OnInit {
   onEdit(){
     this.router.navigate(['edit'],{relativeTo:this.route})
   }
+
+  onDelete(){
+  this.router.navigate(['delete'],{relativeTo:this.route})
+}
+
 }

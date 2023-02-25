@@ -4,7 +4,7 @@
   </head>
 <body class="overlay">
 	<div class="center">
-		<h2>You're DELETING</h2>
+		<h2>You're DELETING {{employe.firstName}} {{employe.lastName}}</h2>
 		<div class="secoverlay">
 			<div class="box">
         <div>
@@ -18,8 +18,8 @@
 			</div>
 
       <div class="button-container">
-        <button button p class="rounded-outline-blue ">Cancel</button>
-        <button button p class="rounded-outline-blue ">Confirm</button>
+        <button button p class="rounded-outline-blue  "(click)="onNavigate()" >Cancel</button>
+        <button button p class="rounded-outline-blue " (click)="onDeleteRecipe()"  >Confirm</button>
       </div>
 		</div>
 	</div>
