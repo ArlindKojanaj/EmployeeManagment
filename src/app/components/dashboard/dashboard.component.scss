@@ -1,11 +1,12 @@
-.dashboard-style {
+.dashboard-style{
   display: flex;
-  align-items: flex-end;
-  justify-content: end;
+  :first-child{
+      width: 100%;
+  }
 }
-.full-border{
-  border-bottom: 2px solid black;
-}
+// .full-border{
+//   border-bottom: 2px solid black;
+// }
 .flex {
   margin-top: 70px;
   margin-left: 40px;
