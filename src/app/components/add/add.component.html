@@ -22,6 +22,10 @@
               <label for="email">Email</label>
               <input id="email" type="email"  class="p-invalid" formControlName="email"  pInputText />
             </div>
+            <div class="phone" >
+              <label for="phone">Phone</label>
+              <input id="phone" type="tel"  class="p-invalid" formControlName="phone"  pInputNumber />
+            </div>
         </div>
         <button button p class="rounded-outline-blue" (click)="onclose()">Cancel</button>
         <button button p class="rounded-outline-blue " type="submit" [disabled]="!employeeForm.valid"> {{ editMode ? 'Update' : 'Save' }}</button>

@@ -54,6 +54,7 @@ private initForm() {
   let lastName = '';
   let dob=0;
   let email=''
+  let phone=0
 
   if(this.editMode){
     const employeee=this.empService.getEmploye(this.id)
@@ -61,6 +62,7 @@ private initForm() {
     lastName=employeee.lastName
     dob=employeee.dob
     email=employeee.email
+    phone=employeee.phone
   }
 
   this.employeeForm = new FormGroup({
@@ -68,6 +70,7 @@ private initForm() {
     lastName: new FormControl(lastName, Validators.required),
     dob: new FormControl(dob, Validators.required),
     email: new FormControl(email, Validators.required),
+    phone: new FormControl(phone, Validators.required),
     
   });
 }

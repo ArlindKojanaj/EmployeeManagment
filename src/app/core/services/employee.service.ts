@@ -60,9 +60,9 @@ export class EmployeeService {
 
 private employe:Employe[]=[
   new Employe(
-    'tesi','test',200,'vlora@VideoColorSpace.com'
+    'tesi','test',200,'vlora@VideoColorSpace.com',+35520202020
   ), new Employe(
-    'testtt','testtttt',200,'vloraaaa@VideoColorSpace.com')
+    'testtt','testtttt',200,'vloraaaa@VideoColorSpace.com',+355204050)
 ]
 
 

@@ -6,14 +6,15 @@ export class Employe {
     public lastName: string
     public  dob: number
     public email: string
+    public phone:number
 
-    constructor(firstName: string, laName: string, dbirth: number, emaiil:string) {
+    constructor(firstName: string, laName: string, dbirth: number, emaiil:string,phonee:number) {
       this.firstName =firstName ;
       this.lastName = laName;
       this.dob = dbirth;
       this.email = emaiil;
+      this.phone=phonee
     }
-    // "phone": string,
     // "address": string,
     // "city": string,
     // "zip": string,
