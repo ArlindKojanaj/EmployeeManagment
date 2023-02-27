@@ -1,23 +1,20 @@
-
-
 <body class="overlay">
-	<div class="center">
-    <!-- <div class="secoverlay"> -->
-      <div class="box">
-        <h3>You're DELETING {{employe.firstName}} {{employe.lastName}}</h3>
-        <div>
-          <label for="dob">Resignation Date:</label>
-          <input type="date" id="dob" min="2004-01-01" class="p-invalid" pInputText >
-        </div>
-        <div>
-          <label for="dob">Resignation Period:</label>
-          <input type="number" id="number" class="p-invalid" pInputText>
-        </div>
-          <button button p class="rounded-outline-blue  "(click)="onNavigate()" >Cancel</button>
-          <button button p class="rounded-outline-blue " (click)="onDeleteRecipe()"  >Confirm</button>
-			</div>
-		</div>
-	<!-- </div> -->
-  
+  <div class="center">
+    <div class="box">
+      <h3>You're DELETING {{employe.firstName}} {{employe.lastName}}</h3>
+      <div class="form-group">
+        <label for="dob">Resignation Date:</label>
+        <input type="date" id="dob" min="2023-01-01" class="p-invalid" pInputText>
+      </div>
+      <div class="form-group">
+        <label for="period">Resignation Period:</label>
+        <input type="number" id="period" class="p-invalid" pInputText min="1">
+      </div>
+      <div class="button-group">
+        <button button p class="rounded-outline-blue" (click)="onNavigate()">Cancel</button>
+        <button button p class="rounded-outline-blue" (click)="onDeleteRecipe()">Confirm</button>
+      </div>
+    </div>
+  </div>
 </body>
 

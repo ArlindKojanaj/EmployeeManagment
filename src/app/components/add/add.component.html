@@ -20,8 +20,9 @@
             </div>
             <div>
               <label for="email">Email</label>
-              <input id="email" type="email"  class="p-invalid" formControlName="email"  pInputText />
-            </div>
+              <input id="email" type="email" class="p-invalid" formControlName="email" pInputText 
+                     pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required />
+            </div>            
             <div class="phone" >
               <label for="phone">Phone</label>
               <input id="phone" type="tel"  class="p-invalid" formControlName="phone"  pInputNumber />
