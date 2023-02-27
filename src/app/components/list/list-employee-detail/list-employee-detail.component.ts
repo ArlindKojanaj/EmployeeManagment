@@ -34,9 +34,6 @@ export class ListEmployeeDetailComponent implements OnInit {
 
   onDelete(){
   this.router.navigate(['delete'],{relativeTo:this.route})
-}
-onSave(){
-  //alert("User saved");
-  this.router.navigate(['/list']);
+
 }
 }
