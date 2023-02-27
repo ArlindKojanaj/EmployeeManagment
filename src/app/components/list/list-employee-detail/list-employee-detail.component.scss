@@ -17,9 +17,8 @@ table {
     display: flex;
     gap: 0.3rem;
     align-items: center;
-    margin-top: 60px;
     margin-left: 30px;
-}
+  }
   .overlay {
     position: fixed;
     top: 0;
@@ -44,13 +43,13 @@ table {
     box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.25);
     z-index: 1000;
     transition: all 0.5s;
-}
-.button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-}
+  }
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
   .rounded-outline-blue {
     border-radius: 20px;
     background-color: transparent;

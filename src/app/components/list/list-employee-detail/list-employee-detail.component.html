@@ -19,15 +19,37 @@
             <td>{{employe.phone}}</td>
         </tr>
        </table>
-       <div class="flex" >
-        <h4>History rows</h4>
+    
+       <div class="flex">
+        <h4>History rows</h4><br>
         <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-succes p-button-text" title="Add history row" ></button>
-      </div>
-       <div class="button-container">
+       </div>
+       
+      <table>
+        <tr>
+          <td>Category</td>
+          <td>Note  </td>
+          <td>Alert</td>
+          <td>Start</td>
+          <td>End</td>
+          <td>Repeat</td> 
+        </tr>
+        <tr>
+          <td> Info</td>
+          <td>Employee Expiratio<br> Smart Card </td>
+          <td>Yes</td>
+          <td></td>
+          <td></td>
+          <td>4dd</td>
+        </tr>
+      </table>
+    
+      <div class="button-container">
         <button button p class="rounded-outline-blue " (click)="onNavigate()">Close</button>
         <button button p class="rounded-outline-blue " (click)="onEdit()">Edit</button>
         <button p class="rounded-outline-blue "  (click)="onDelete()" >Delete</button>
-    </div>
-
+        <button button p class="rounded-outline-blue " (click)="onSave()">Save</button>
+      </div>
+    
   </div>
-  
+</body>
