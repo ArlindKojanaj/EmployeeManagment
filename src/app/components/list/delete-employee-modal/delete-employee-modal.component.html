@@ -1,20 +1,27 @@
+<form  [formGroup]="deleteForm"  (ngSubmit)="onSubmit()" >
 <body class="overlay">
   <div class="center">
     <div class="box">
       <h3>You're DELETING {{employe.firstName}} {{employe.lastName}}</h3>
-      <div class="form-group">
-        <label for="dob">Resignation Date:</label>
-        <input type="date" id="dob" min="2023-01-01" class="p-invalid" pInputText>
-      </div>
-      <div class="form-group">
-        <label for="period">Resignation Period:</label>
-        <input type="number" id="period" class="p-invalid" pInputText min="1">
-      </div>
-      <div class="button-group">
-        <button button p class="rounded-outline-blue" (click)="onNavigate()">Cancel</button>
-        <button button p class="rounded-outline-blue" (click)="onDeleteRecipe()">Confirm</button>
-      </div>
-    </div>
-  </div>
-</body>
 
+         <div class="form-group">
+           <label for="regdate">Resignation Date:</label>
+           <input  formControlName="regdate"  type="date" id="regdate" min="2023-01-01" class="p-invalid" pInputText>
+          </div>
+         <div class="form-group">
+            <label for="period">Resignation Period:</label>
+            <input formControlName="period"  type="number" id="period" class="p-invalid" pInputText min="1">
+          </div>
+          <p>
+            *if you leave the field empty automatically set ResignationDate as today and ResignationPeriod as 0
+          </p>
+          <div class="button-group">
+             <button button p class="rounded-outline-blue" (click)="onNavigate()">Cancel</button>
+             <button button p class="rounded-outline-blue" type="submit" [disabled]="!deleteForm.valid" >Confirm</button>
+          </div>
+          
+        </div>
+      </div>
+    </body>
+    
+  </form>
