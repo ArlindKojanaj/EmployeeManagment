@@ -46,8 +46,8 @@ id:number;
 // }
 
 private initForm() {
-  let id = 0;
-  let regdate = '';
+  // let id = 0;
+  let regdate =new Date().toJSON().slice(0, 10);;
   let period=0;
 
 
