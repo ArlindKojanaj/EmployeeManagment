@@ -60,9 +60,9 @@ export class EmployeeService {
 
 private employe:Employe[]=[
   new Employe(
-    'tesi','test',200,'vlora@VideoColorSpace.com',+35520202020,'Employee Expiration Smart Card',2022,2023,5
+    1213,'tesi','test',200,'vlora@VideoColorSpace.com',+35520202020,'Employee Expiration Smart Card',2022,2023,5
   ), new Employe(
-    'testtt','testtttt',200,'vloraaaa@VideoColorSpace.com',+355204050,'Employee Expiration Smart Card',2020,2024,3)
+    1312,'testtt','testtttt',200,'vloraaaa@VideoColorSpace.com',+355204050,'Employee Expiration Smart Card',2020,2024,3)
 ]
 
 

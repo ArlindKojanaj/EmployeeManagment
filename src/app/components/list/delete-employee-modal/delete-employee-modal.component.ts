@@ -53,7 +53,7 @@ private initForm() {
 
   this.deleteForm = new FormGroup({
    
-    id: new FormControl(this.id, Validators.required),
+    id: new FormControl(this.employe.id, Validators.required),
     regdate: new FormControl(regdate, Validators.required),
     period: new FormControl(period, Validators.required),
     

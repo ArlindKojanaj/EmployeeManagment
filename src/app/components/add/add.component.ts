@@ -50,14 +50,16 @@ onSubmit(){
 
 
 private initForm() {
+  let id=null;
   let firstName = '';
   let lastName = '';
   let dob=0;
   let email=''
-  let phone=0
+  let phone=null;
 
   if(this.editMode){
     const employeee=this.empService.getEmploye(this.id)
+    id=employeee.id
     firstName=employeee.firstName
     lastName=employeee.lastName
     dob=employeee.dob
@@ -66,6 +68,8 @@ private initForm() {
   }
 
   this.employeeForm = new FormGroup({
+
+    id: new FormControl(id, Validators.required),
     firstName: new FormControl(firstName, Validators.required),
     lastName: new FormControl(lastName, Validators.required),
     dob: new FormControl(dob, Validators.required),

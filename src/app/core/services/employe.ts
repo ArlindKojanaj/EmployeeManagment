@@ -1,7 +1,7 @@
 export class Employe {
 
     
-  //  public id: number,
+   public id: number
     public firstName: string
     public lastName: string
     public  dob: number
@@ -12,7 +12,8 @@ export class Employe {
     public  endDate: number
     public repeatEvery: number
 
-    constructor(firstName: string, 
+    constructor(id:number,
+      firstName: string, 
                 laName: string,
                 dbirth: number, 
                 emaiil:string,
@@ -21,6 +22,7 @@ export class Employe {
                 startDate:number,
                 endDate:number,
                 repeatEvery:number) {
+                  this.id=id
       this.firstName =firstName ;
       this.lastName = laName;
       this.dob = dbirth;

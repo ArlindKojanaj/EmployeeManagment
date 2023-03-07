@@ -8,7 +8,7 @@
         <div class="grid-container">
             <div>
               <label for="firstname">FirstName</label>
-              <input id="firstname" type="text" formControlName="firstName" class="p-invalid" pInputText />
+              <input  id="firstname" type="text" formControlName="firstName" class="p-invalid" pInputText />
             </div>
             <div>
               <label for="lastname">LastName</label>
@@ -26,6 +26,10 @@
             <div class="phone" >
               <label for="phone">Phone</label>
               <input id="phone" type="tel"  class="p-invalid" formControlName="phone"  pInputNumber />
+            </div>
+            <div class="id" >
+              <label for="id">ID</label>
+              <input id="id" type="tel"  class="p-invalid" formControlName="id"  pInputNumber />
             </div>
         </div>
         <button button p class="rounded-outline-blue" (click)="onclose()">Cancel</button>
