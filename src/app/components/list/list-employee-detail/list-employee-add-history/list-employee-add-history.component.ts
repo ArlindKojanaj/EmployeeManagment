@@ -32,7 +32,7 @@ export class ListEmployeeAddHistoryComponent implements OnInit {
                                          this.historyForm.value['startDate'],
                                          this.historyForm.value['endDate'])
 
-                                        this.router.navigate(['/list']);
+                                        this.router.navigate([`/list/${this.id}`]);
 
                                         // console.log(this.employeService.getEmploye(this.id))
    }
