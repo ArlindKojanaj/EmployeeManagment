@@ -39,10 +39,16 @@ onclose(){
 
 onSubmit(){
   if(this.editMode){
-    this.empService.updateEmployee(this.id,this.employeeForm.value)
+    this.empService.updateEmployeeNew(this.id,this.employeeForm.value['id'],
+    this.employeeForm.value['firstName'],
+    this.employeeForm.value['lastName'],
+    this.employeeForm.value['dob'],
+    this.employeeForm.value['phone'],
+    this.employeeForm.value['email'])
   }
   else{
     this.empService.addEmployee(this.employeeForm.value)
+    console.log(this.empService.getEmployye())
   }
   this.router.navigate(['/list']);
   

@@ -1,0 +1,45 @@
+
+<div class="overlay" > 
+
+    <form [formGroup]="historyForm"  (ngSubmit)="onSubmit()" >
+     
+    
+        <div class="center" >
+            <h2>New History </h2> 
+            <div class="grid-container">
+                <div>
+                  <label for="InsDt">Insertion Date</label>
+                  <input  id="InsDt" type="date"  class="p-invalid" pInputNumber />
+                </div>
+                <div>
+                  <label for="DLModify">Date Last Modified</label>
+                  <input id="DLModify" type="date"  class="p-invalid" pInputNumber />
+                </div>
+                <div>
+                  <label for="Categ">Category</label>
+                  <input type="number" id="Categ"  class="p-invalid" formControlName="category"  pInputText >
+                </div>
+                <div>
+                  <label for="Notes">Notes</label>
+                  <input id="Notes" type="text" class="p-invalid" formControlName="notes" pInputText />
+                </div>            
+                <div class="phone" >
+                  <label for="Repetition">Repetition</label>
+                  <input id="Repetition" type="number"  class="p-invalid" formControlName="repeatEvery"  pInputNumber />
+                </div>
+                <div class="id" >
+                  <label for="startDate">Start Date</label>
+                  <input id="startDate" type="date"  class="p-invalid"  formControlName="startDate"  pInputNumber />
+                </div>
+                <div class="id" >
+                  <label for="endDate">End Date</label>
+                  <input id="endDate" type="date"  class="p-invalid"  formControlName="endDate"  pInputNumber />
+                </div>
+            </div>
+            <button button p class="rounded-outline-blue" (click)="onclose()">Cancel</button>
+            <button button p class="rounded-outline-blue " type="submit" [disabled]="!historyForm.valid"  > Save</button>
+        </div>
+    
+    </form>
+    
+    </div>

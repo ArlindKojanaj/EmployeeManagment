@@ -36,4 +36,9 @@ export class ListEmployeeDetailComponent implements OnInit {
   this.router.navigate(['delete'],{relativeTo:this.route})
 
 }
+
+onHistory(){
+  this.router.navigate(['history'],{relativeTo:this.route})
+
+}
 }

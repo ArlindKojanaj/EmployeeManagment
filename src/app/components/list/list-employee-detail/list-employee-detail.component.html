@@ -23,8 +23,8 @@
 
        
        <div class="flex">
-        <h4>History rows</h4><br>
-        <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-success p-button-text" title="Add history row" ></button>
+        <h4>History row</h4><br>
+        <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-success p-button-text" title="Add history row" (click)="onHistory()"  ></button>
        </div>
        
       <table>
@@ -37,8 +37,8 @@
           <td>Repeat</td> 
         </tr>
         <tr>
-          <td> Info</td>
-          <td>{{employe.note}} </td>
+          <td> {{employe.category}}</td>
+          <td>{{employe.notes}} </td>
           <td>Yes</td>
           <td>{{employe.startDate}}</td>
           <td>{{employe.endDate}}</td>
@@ -53,3 +53,4 @@
       </div>
   </div>
 </body>
+

@@ -7,10 +7,11 @@ export class Employe {
     public  dob: number
     public email: string
     public phone:number
-    public  note: string
+    public  notes: string
     public startDate: number
     public  endDate: number
     public repeatEvery: number
+    public category: number
 
     constructor(id:number,
       firstName: string, 
@@ -21,17 +22,19 @@ export class Employe {
                 notee:string,
                 startDate:number,
                 endDate:number,
-                repeatEvery:number) {
-                  this.id=id
+                repeatEvery:number,
+                category:number) {
+       this.id=id
       this.firstName =firstName ;
       this.lastName = laName;
       this.dob = dbirth;
       this.email = emaiil;
       this.phone=phonee;
-      this.note=notee;
+      this.notes=notee;
       this.startDate=startDate;
       this.endDate=endDate;
-      this.repeatEvery=repeatEvery
+      this.repeatEvery=repeatEvery;
+      this.category=category
     }
     // "address": string,
     // "city": string,

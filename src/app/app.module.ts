@@ -25,6 +25,7 @@ import {TableModule} from 'primeng/table';
 import {CardModule} from 'primeng/card';
 import { ListEmployeeDetailComponent } from './components/list/list-employee-detail/list-employee-detail.component';
 import { DeleteEmployeeModalComponent } from './components/list/delete-employee-modal/delete-employee-modal.component';
+import { ListEmployeeAddHistoryComponent } from './components/list/list-employee-detail/list-employee-add-history/list-employee-add-history.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { DeleteEmployeeModalComponent } from './components/list/delete-employee-
     LoginComponent,
     DashboardComponent,
     ListEmployeeDetailComponent,
-    DeleteEmployeeModalComponent
+    DeleteEmployeeModalComponent,
+    ListEmployeeAddHistoryComponent
   ],
   imports: [
     BrowserModule,
